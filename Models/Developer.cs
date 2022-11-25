@@ -1,9 +1,9 @@
 namespace MinimalAPIMongoDB.Models;
 
+[BsonIgnoreExtraElements]
 public record Developer
 {
     [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
     public string _id { get; set; }
 
     [BsonElement("developer_name")]
