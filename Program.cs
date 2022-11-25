@@ -58,7 +58,7 @@ void ConfigureApp(WebApplication app)
         return Results.Created($"/developer/{developer._id}", developer);
     });
 
-    app.MapPut("/api/developer/{id}", async(DeveloperService RegisterServices, string IdentityServiceCollectionExtensions, Developer updateDeveloper) =>
+    app.MapPut("/api/developer/{id}", async(DeveloperService service, string id, Developer updateDeveloper) =>
     {
         var developer = await service.Get(id);
         

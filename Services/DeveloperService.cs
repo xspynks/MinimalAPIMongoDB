@@ -1,4 +1,5 @@
 using MinimalAPIMongoDB.Data;
+using MinimalAPIMongoDB.Models;
 
 namespace MinimalAPIMongoDB.Services;
 
@@ -11,7 +12,7 @@ public class DeveloperService
         var mongoClient = new MongoClient(options.Value.ConnectionString);
 
         _developers = mongoClient
-            .GetDatabase(options.Value.DatabaseName)            ;
+            .GetDatabase(options.Value.DatabaseName)    
             .GetCollection<Developer>(options.Value.CollectionName);
     }
     
@@ -19,7 +20,7 @@ public class DeveloperService
         await _developers.Find(_ => true).ToListAsync();
     
     public async Task<Developer> Get(string id) =>
-        await._developers.Find(d => d._id == id).FirstOrDefaultAsync();
+        await _developers.Find(d => d._id == id).FirstOrDefaultAsync();
     
     public async Task Create(Developer developer) =>
         await _developers.InsertOneAsync(developer);

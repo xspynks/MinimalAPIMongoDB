@@ -1,6 +1,6 @@
-global using StudentManager.Models;
-global using StudentManager.Data;
-global using StudentManager.Services;
+global using MinimalAPIMongoDB.Models;
+global using MinimalAPIMongoDB.Data;
+global using MinimalAPIMongoDB.Services;
 global using MongoDB.Bson;
 global using MongoDB.Bson.Serialization.Attributes;
 global using MongoDB.Driver;
