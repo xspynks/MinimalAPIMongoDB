@@ -14,4 +14,8 @@
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Services\Test.cs" />
+    </ItemGroup>
+
 </Project>
