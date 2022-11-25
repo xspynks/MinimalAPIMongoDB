@@ -15,14 +15,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Services\Test.cs" />
-      <Compile Remove="aaa.cs" />
-      <Compile Remove="WeatherForecast.cs" />
-      <Compile Remove="Controllers\WeatherForecastController.cs" />
-      <Compile Remove="Controllers\**" />
-    </ItemGroup>
-
-    <ItemGroup>
       <EmbeddedResource Remove="Controllers\**" />
     </ItemGroup>
 
